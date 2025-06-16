@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แบบรายงานการนำเทคโนโลยีมาใช้เพื่อสนับสนุนการเรียนการสอน</title>
+  <style>
+    body {
+      font-family: 'sans-serif';
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      max-width: 720px;
+      margin: auto;
+    }
+    h2 {
+      color: #6A1B9A;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"], select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    .checkbox-group {
+      margin-left: 20px;
+    }
+    button {
+      background-color: #FFEB3B;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #FDD835;
+    }
+    .section-title {
+      margin-top: 25px;
+      color: #6A1B9A;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📘 แบบรายงานการนำเทคโนโลยีมาใช้เพื่อสนับสนุนการเรียนการสอน</h2>
+  <p>📝 แบบฟอร์มนี้ใช้สำหรับกรอกข้อมูลออนไลน์ เมื่อกรอกเสร็จระบบจะส่งข้อมูลไปยัง Google Sheets โดยอัตโนมัติ และรายการที่เลือกจะแสดงเป็นเครื่องหมายถูก</p>
+
+  <form method="POST" action="https://script.google.com/macros/s/AKfycbxEz4GxJ261w05FExNwDdHwmtO0gTCI0kgXwyqwDfGJz6A7kQKeZG53Rc2yG9nyBazJSQ/exec">
+
+    <label>ชื่อ - สกุล</label>
+    <input type="text" name="name" required>
+
+    <label>สาขาวิชา</label>
+    <select name="department" required>
+      <option value="">-- กรุณาเลือก --</option>
+      <option value="สาขาวิชาวิทยาการคอมพิวเตอร์">สาขาวิชาวิทยาการคอมพิวเตอร์</option>
+      <option value="สาขาวิชาวิทยาศาสตร์และเทคโนโลยีสิ่งแวดล้อม">สาขาวิชาวิทยาศาสตร์และเทคโนโลยีสิ่งแวดล้อม</option>
+      <option value="สาขาวิชาวัสดุศาสตร์อุตสาหกรรม">สาขาวิชาวัสดุศาสตร์อุตสาหกรรม</option>
+      <option value="สาขาวิชาคณิตศาสตร์และสถิติ">สาขาวิชาคณิตศาสตร์และสถิติ</option>
+      <option value="สาขาวิชาเทคโนโลยีสุขภาพ เครื่องสำอางและการชะลอวัย">สาขาวิชาเทคโนโลยีสุขภาพ เครื่องสำอางและการชะลอวัย</option>
+      <option value="สาขาวิชาวิทยาการข้อมูลและเทคโนโลยีสารสนเทศ">สาขาวิชาวิทยาการข้อมูลและเทคโนโลยีสารสนเทศ</option>
+      <option value="สาขาวิชาการจัดการสภาพภูมิอากาศและสิ่งแวดล้อม">สาขาวิชาการจัดการสภาพภูมิอากาศและสิ่งแวดล้อม</option>
+      <option value="หมวดวิชาวิทยาศาสตร์">หมวดวิชาวิทยาศาสตร์</option>
+    </select>
+
+    <div class="section-title">📚 ฐานข้อมูลงานวิจัยที่ใช้</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="researchDB[]" value="IEEE"> IEEE</label>
+      <label><input type="checkbox" name="researchDB[]" value="ScienceDirect"> ScienceDirect</label>
+      <label><input type="checkbox" name="researchDB[]" value="Fashion Snoops"> Fashion Snoops</label>
+      <label><input type="checkbox" name="researchDB[]" value="Academic Search Ultimate (ASU)"> Academic Search Ultimate (ASU)</label>
+      <label><input type="checkbox" name="researchDB[]" value="EBSCO Discovery Service (EDS) Plus Full"> EBSCO Discovery Service (EDS) Plus Full</label>
+      <label><input type="checkbox" name="researchDB[]" value="Engineering Source"> Engineering Source</label>
+      <label><input type="checkbox" name="researchDB[]" value="Emerald Management"> Emerald Management</label>
+      <label><input type="checkbox" name="researchDB[]" value="SpringerLink – Journal"> SpringerLink – Journal</label>
+      <label><input type="checkbox" name="researchDB[]" value="ACM Digital Library"> ACM Digital Library</label>
+      <label><input type="checkbox" name="researchDB[]" value="American Chemical Society Journal (ACS)"> American Chemical Society Journal (ACS)</label>
+      <label><input type="checkbox" name="researchDB[]" value="คลังปัญญา (Intellectual Repository)"> คลังปัญญา (Intellectual Repository)</label>
+      <label><input type="checkbox" name="researchDB[]" value="Thai Digital Collection (ThaiLis)"> Thai Digital Collection (ThaiLis)</label>
+      <label><input type="checkbox" name="researchDB[]" value="UC - TAL"> UC - TAL</label>
+    </div>
+
+    <div class="section-title">💻 ซอฟต์แวร์ที่ใช้ในการเรียนการสอน</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="software[]" value="Google Workspace for Education (Classroom, Meet, Form เป็นต้น)"> Google Workspace</label>
+      <label><input type="checkbox" name="software[]" value="Microsoft Word/Excel/Office365"> Microsoft Office</label>
+      <label><input type="checkbox" name="software[]" value="Adobe Creative Cloud (Photoshop, Illustrator, Acrobat)"> Adobe CC</label>
+      <label><input type="checkbox" name="software[]" value="SPSS"> SPSS</label>
+      <label><input type="checkbox" name="software[]" value="ZOOM"> ZOOM</label>
+      <label><input type="checkbox" name="software[]" value="MATLAB"> MATLAB</label>
+      <label><input type="checkbox" name="software[]" value="Autodesk AutoCAD"> AutoCAD</label>
+    </div>
+
+    <div class="section-title">🌐 ระบบ E-Learning ที่ใช้</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="elearning[]" value="ระบบ LMS (Learning Management System)"> LMS</label>
+      <label><input type="checkbox" name="elearning[]" value="MOOC (Massive Open Online Courses)"> MOOC</label>
+    </div>
+
+    <div class="section-title">📖 หนังสืออิเล็กทรอนิกส์ (E-book)</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="ebookCU" value="on"> CU e-Library</label>
+      <input type="text" name="ebookOther" placeholder="อื่น ๆ (กรอกเพิ่มเติม)">
+    </div>
+
+    <div class="section-title">🖥️ บริการศูนย์ข้อมูล</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="datacenter[]" value="พื้นที่จัดทำเว็บไซต์"> พื้นที่จัดทำเว็บไซต์</label>
+      <label><input type="checkbox" name="datacenter[]" value="ระบบชื่อโดเมนเนม"> ระบบชื่อโดเมนเนม</label>
+      <label><input type="checkbox" name="datacenter[]" value="Public IP (หมายเลข IP สาธารณะ)"> Public IP</label>
+      <label><input type="checkbox" name="datacenter[]" value="เครื่องจำลอง Virtual Machine"> Virtual Machine</label>
+    </div>
+
+    <label class="section-title">📝 หมายเหตุเพิ่มเติม</label>
+    <textarea name="note" rows="4" placeholder="หมายเหตุเพิ่มเติม (ถ้ามี)"></textarea>
+
+    <button type="submit">ส่งข้อมูล</button>
+  </form>
+
+</body>
+</html>
